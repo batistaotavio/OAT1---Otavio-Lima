@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #222;
+    min-height: 100vh;
+}
+
+.Depoimentos {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.Depoimentos h1 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.Depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 30px 25px;
+    color: white;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    top: -50px;
+    right: -40px;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.cargo {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.texto {
+    line-height: 1.6;
+    font-size: 15px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.texto::before {
+    content: '"';
+    position: absolute;
+    font-size: 80px;
+    opacity: 0.2;
+    top: -35px;
+    left: -10px;
+}
+
+.estrelas {
+    color: #ffd700;
+    font-size: 20px;
+}
+
+/* Responsividade */
+
+@media (max-width: 800px) {
+    .Depoimentos-grid {
+        grid-template-columns: 1fr;
+    }
+    .Depoimentos h1 {
+        font-size: 30px;
+    }
+}
+

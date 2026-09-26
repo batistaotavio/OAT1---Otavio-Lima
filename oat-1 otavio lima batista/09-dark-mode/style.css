@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #ffffff;
+    --text: #222222;
+    --card: #f4f4f4;
+    --text-secondary: #666666;
+
+}
+
+#tema {
+    display: none;
+}
+
+#tema:checked ~ .pagina {
+    --bg: #121212;
+    --text: #ffffff;
+    --card: #1e1e1e;
+    --text-secondary: #cccccc;
+}
+
+.pagina {
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #222222;
+    transition: 0.3s;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+   background: var(--card);
+   transition: 0.3s;
+   padding: 50px;
+   border-radius: 15px;
+   box-shadow: 0 5px 20px #000000;
+}
+
+.container h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.container p {
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.switch {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    position: relative;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background: #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 3px;
+    top: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(30px);
+}
+
+#tema:checked ~ .pagina .slider {
+    background: #667eea;
+}
+
+#tema:checked ~ .pagina .slider::before {
+    transform: translateX(30px);
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #667eea;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5568d8;
+    transform: translateY(-3px);
+}

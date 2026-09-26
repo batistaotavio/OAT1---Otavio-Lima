@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Paleta HSL */
+    --color-50: hsl(220, 100%, 97%);
+    --color-200: hsl(220, 90%, 85%);
+    --color-400: hsl(220, 80%, 65%);
+    --color-600: hsl(220, 70%, 50%);
+    --color-900: hsl(220, 70%, 25%);
+
+    /* Escala tipográfica */
+    --text-small: 14px;
+    --text-normal: 16px;
+    --text-medium: 20px;
+    --text-large: 32px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--color-50);
+    color: var(--color-900);
+    font-size: var(--text-normal);
+    padding: 50px 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: var(--text-large);
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: var(--text-normal);
+    margin-bottom: 40px;
+}
+
+section {
+    margin-bottom: 45px;
+}
+
+h2 {
+    font-size: var(--text-medium);
+    margin-bottom: 20px;
+}
+
+/* Paleta */
+
+.cores {
+    display: flex;
+    gap: 15px;
+}
+
+.cor {
+    width: 120px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.cor-1 {
+    background: var(--color-50);
+}
+
+.cor-2 {
+    background: var(--color-200);
+}
+.cor-3 {
+    background: var(--color-400);
+}
+.cor-4 {
+    background: var(--color-600);
+    color: white;
+}
+.cor-5 {
+    background: var(--color-900);
+    color: white;
+}
+
+/* Botões */
+
+.botoes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: var(--text-normal);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Primary */
+
+.primary {
+    background: var(--color-600);
+    color: white;
+    border: 2px solid var(--color-600);
+}
+
+.primary:hover {
+    background: var(--color-900);
+}
+
+.primary:focus {
+    outline: 3px solid var(--color-200);
+}
+
+/* Secondary */
+
+.secondary {
+    background: white;
+    color: var(--color-600);
+    border: 2px solid var(--color-600);
+}
+.secondary:hover {
+    background: var(--color-200);
+}
+.secondary:focus {
+    outline: 3px solid var(--color-400);
+}
+
+/* Ghost */
+
+.ghost {
+    background: transparent;
+    color: var(--color-600);
+    border: 2px solid transparent;
+}
+.ghost:hover {
+    background: var(--color-200);
+}
+.ghost:focus {
+    outline: 3px solid var(--color-400)
+}
+
+/* Disabled */
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .cores {
+        flex-wrap: wrap;
+    }
+
+    .cor {
+        flex: 1;
+        min-width: 100px;
+    }
+}
